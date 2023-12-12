@@ -47,7 +47,7 @@ const getContractorByID = async (id) => {
 const getContractorsByServiceId = async (serviceId) => {
   try {
     const contractors = await db.any(
-      "SELECT contractors.name, contractors.description, contractors.location\
+      "SELECT contractors.name, contractors.description, contractors.location, contractors.logo\
       FROM contractors\
       JOIN contractors_services\
       ON contractors.id = contractors_services.contractor_id\
